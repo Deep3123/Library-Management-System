@@ -1,11 +1,3 @@
-class Book:
-    def __init__(self, isbn, title, author, year):
-        self.isbn = isbn
-        self.title = title
-        self.author = author
-        self.year = year
-        self.is_borrowed = False
-
 class Library:
     def __init__(self):
         self.books = []
@@ -15,3 +7,10 @@ class Library:
 
     def available_books(self):
         return [book for book in self.books if not book.is_borrowed]
+    
+    def borrow_book(self, isbn):
+        for book in self.books:
+            if book.isbn == isbn and not book.is_borrowed:
+                book.is_borrowed = True
+                return
+        raise Exception("Book not available")
