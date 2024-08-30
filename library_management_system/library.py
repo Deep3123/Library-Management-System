@@ -14,3 +14,11 @@ class Library:
                 book.is_borrowed = True
                 return
         raise Exception("Book not available")
+
+    def return_book(self, isbn):
+        for book in self.books:
+            if book.isbn == isbn and book.is_borrowed:
+                book.is_borrowed = False
+                return
+        raise Exception("Book not found or not borrowed")
+    
