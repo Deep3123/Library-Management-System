@@ -71,6 +71,6 @@ A detailed test report showing the results of all test cases is included in the 
 ## Contact 📫
 For any questions, feedback, or issues, please feel free to reach out:
 
-- Email: deepp3123@gmail.com
-- GitHub Profile: Deep3123
-- Portfolio: https://portfolioatdeep.onrender.com/
+- **Email**: deepp3123@gmail.com
+- **GitHub Profile**: [Deep3123](https://github.com/Deep3123)
+- **Portfolio**: https://portfolioatdeep.onrender.com/
