@@ -21,4 +21,3 @@ class Library:
                 book.is_borrowed = False
                 return
         raise Exception("Book not found or not borrowed")
-    
