@@ -57,7 +57,15 @@ def test_borrow_book():
 # Test case for attempting to borrow a book that is not available
 def test_borrow_book_if_book_is_not_available():
     library = Library()
-    with pytest.raises(Exception, match="Book not Found."):
+    with pytest.raises(Exception, match="Book not available"):
+        library.borrow_book("123456789")
+
+def test_borrow_book_if_book_is_not_available():
+    library = Library()
+    book = Book("123456789", "The Great Gatsby", "F. Scott Fitzgerald", 1925)
+    library.add_book(book)
+    library.borrow_book("123456789")
+    with pytest.raises(Exception, match="Book not available"):
         library.borrow_book("123456789")
 
 
@@ -74,7 +82,7 @@ def test_return_book():
 # Test case for attempting to return a book that is not available in the library
 def test_return_book_if_book_is_not_available():
     library = Library()
-    with pytest.raises(Exception, match="Book not Found."):
+    with pytest.raises(Exception, match="Book not found or not borrowed"):
         library.return_book("123456789")
 
 
