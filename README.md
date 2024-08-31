@@ -66,8 +66,11 @@ As this is a code-only project, there is no user interface. To run the applicati
 Find the source code and all commits in the Git repository here: https://github.com/Deep3123/Library-Management-System
 
 ## Test Report 📝
-A detailed test report showing the results of all test cases is included in the repository(report.xml).
-
+A detailed test report showing the results of all test cases is included in the repository (report.xml).
+- Use command to generate a Test report:
+   ```shell
+   pytest --junitxml=report.xml
+   
 ## Contact 📫
 For any questions, feedback, or issues, please feel free to reach out:
 
