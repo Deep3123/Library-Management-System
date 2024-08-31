@@ -48,7 +48,7 @@ This project is developed using the following technologies:
 As this is a code-only project, there is no user interface. To run the application, execute the Python files directly in your terminal or use an IDE like VS Code.
 
 ### Running Tests 🧪
-- To run the test suite, use pytest:
+- To run the test suite, use `pytest`:
    ```shell
    pytest
 
