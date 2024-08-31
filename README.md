@@ -59,9 +59,9 @@ The Library Management System is a simple Python-based application designed to m
 As this is a code-only project, there is no user interface. To run the application, execute the Python files directly in your terminal or use an IDE like VS Code.
 
 ### Running Tests
-To run the test suite, use pytest:
-    ```shell
-    pytest
+- To run the test suite, use pytest:
+   ```shell
+   pytest
 
 ### Features Implemented
 - Add Books: Adds a new book to the library's collection.
