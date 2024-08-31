@@ -53,10 +53,10 @@ As this is a code-only project, there is no user interface. To run the applicati
    pytest
 
 ### Features Implemented 🌟
-- Add Books: Adds a new book to the library's collection.
-- Borrow Books: Allows a user to borrow a book if it is available.
-- Return Books: Allows a user to return a borrowed book.
-- View Available Books: Lists all books that are currently available in the library.
+- **Add Books**: Adds a new book to the library's collection.
+- **Borrow Books**: Allows a user to borrow a book if it is available.
+- **Return Books**: Allows a user to return a borrowed book.
+- **View Available Books**: Lists all books that are currently available in the library.
 
 ### Additional Features 💡
 - Validation: The Book class ensures that all required parameters (ISBN, Title, Author,   Year) are provided when creating a new book.
