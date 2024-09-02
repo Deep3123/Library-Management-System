@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <testsuites>
-    <testsuite name="pytest" errors="0" failures="0" skipped="0" tests="11" time="0.047"
-        timestamp="2024-08-31T15:44:12.224438+05:30" hostname="Deep">
+    <testsuite name="pytest" errors="0" failures="0" skipped="0" tests="11" time="0.063"
+        timestamp="2024-09-02T13:36:44.936743+05:30" hostname="Deep">
         <testcase classname="tests.test_library" name="test_add_book" time="0.001" />
-        <testcase classname="tests.test_library" name="test_add_book_missing_isbn" time="0.001" />
+        <testcase classname="tests.test_library" name="test_add_book_missing_isbn" time="0.002" />
         <testcase classname="tests.test_library" name="test_add_book_missing_title" time="0.001" />
         <testcase classname="tests.test_library" name="test_add_book_missing_author" time="0.001" />
         <testcase classname="tests.test_library" name="test_add_book_missing_year" time="0.001" />

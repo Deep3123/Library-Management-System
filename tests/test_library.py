@@ -5,7 +5,7 @@ import pytest
 # Add the parent directory to the system path so that library modules can be imported
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
-from library_management_system.models import Book
+from library_management_system.models import Book, User
 from library_management_system.library import Library
 
 
@@ -68,7 +68,6 @@ def test_borrow_book_if_book_is_not_available():
     with pytest.raises(Exception, match="Book not available"):
         library.borrow_book("123456789")
 
-
 # Test case for returning a borrowed book to the library
 def test_return_book():
     library = Library()
@@ -78,13 +77,20 @@ def test_return_book():
     library.return_book("123456789")
     assert len(library.available_books()) == 1
 
-
 # Test case for attempting to return a book that is not available in the library
 def test_return_book_if_book_is_not_available():
     library = Library()
-    with pytest.raises(Exception, match="Book not found or not borrowed"):
+    with pytest.raises(Exception, match="Book not found."):
         library.return_book("123456789")
 
+# Test case for attempting to return a book which is not borrowed
+def test_return_book_if_book_is_not_borrowed():
+    library = Library()
+    book = Book("123456789", "The Great Gatsby", "F. Scott Fitzgerald", 1925)
+    library.add_book(book)
+    with pytest.raises(Exception, match="Book is not borrowed."):
+        library.return_book("123456789")
+        
 
 # Test case for viewing the list of available books in the library
 def test_view_available_books():

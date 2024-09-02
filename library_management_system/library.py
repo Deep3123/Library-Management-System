@@ -1,3 +1,4 @@
+from .models import *
 class Library:
     def __init__(self):
         # Initialize with an empty book list
@@ -31,4 +32,6 @@ class Library:
             if book.isbn == isbn and book.is_borrowed:
                 book.is_borrowed = False
                 return
-        raise Exception("Book not found or not borrowed")
+            elif book.isbn == isbn and not book.is_borrowed:
+                raise Exception("Book is not borrowed.")
+        raise Exception("Book not found.")   
